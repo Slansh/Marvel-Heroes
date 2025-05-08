@@ -1,54 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HQs Marvel</title>
-    <link rel="stylesheet" href="../assets/internal.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HQs Marvel</title>
+  <link rel="stylesheet" href="../assets/internal.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">MarvelHeroes</div>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="pages/herois.html">Heróis</a></li>
-            <li><a href="pages/hqs.html">HQs</a></li>
-            <li><a href="pages/filmes.html">Filmes</a></li>
-            <li><a href="pages/series.html">Séries</a></li>
-        </ul>
-    </nav>
-    
-    <section class="main-section">
-        <h2>HQs da Marvel</h2>
-        <div class="cards-container ">
-            <div class="card">
-                <img src="../assets/images/homem-aranha-HQ.jpg" alt="homem-aranha-HQ">
-                <div class="card-content">
-                    <h3>Homem-Aranha</h3>
-                    <p>Estreia do Peter Parker como o incrível homem-Aranha nos quadrinhos.</p>
-                </div>
-            </div>
 
-            <div class="card">
-                <img src="../assets/images/x-man-HQ.jpg" alt="X-Men">
-                <div class="card-content">
-                    <h3>X-Men</h3>
-                    <p>Reviva os quadrinhos dos mutantes mais famosos dos quadrinhos.</p>
-                </div>
-            </div>
+  <nav class="navbar">
+    <div class="logo">MarvelVerse</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="herois.html">Heróis</a></li>
+      <li><a href="hqs.html">HQs</a></li>
+      <li><a href="filmes.html">Filmes</a></li>
+      <li><a href="series.html">Séries</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" style="background-image: url('../assets/images/banner.jpg');">
+    <h1>Explore as HQs da Marvel</h1>
+    <p>Grandes histórias, heróis icônicos e vilões lendários nas páginas das HQs!</p>
+  </header>
+
+  <section class="main-section">
+    <h2>HQs em Destaque</h2>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide card">
+          <img src="../assets/images/spider-man.jpg" alt="HQ do Homem-Aranha">
+          <div class="card-content">
+            <h3>Homem-Aranha</h3>
+            <p>Aventuras clássicas e modernas do Amigão da Vizinhança.</p>
+          </div>
         </div>
 
-        <div class="card">
-            <img src="../assets/images/avengers-HQ.jpg" alt="Avengers-HQ">
-            <div class="card-content">
-                <h3>Vingadores</h3>
-                <p>Os maiores heóis da marvel se unem para formar os vingadores.</p>
-            </div>
+        <div class="swiper-slide card">
+          <img src="../assets/images/x-man-HQ.jpg" alt="HQ dos X-Men">
+          <div class="card-content">
+            <h3>X-Men</h3>
+            <p>Uma equipe de mutantes lutando por um mundo que os teme.</p>
+          </div>
         </div>
-    </section>
 
-    <footer>
-        Apenas um cara aleatório
-    </footer>
+        <div class="swiper-slide card">
+          <img src="../assets/images/avengers-HQ.jpg" alt="HQ dos Vingadores">
+          <div class="card-content">
+            <h3>Vingadores</h3>
+            <p>Os maiores heróis da Terra reunidos para combater ameaças cósmicas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <footer>
+    Desenvolvido por um fã da Marvel, ou talvez nem tanto
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      breakpoints: {
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      }
+    });
+  </script>
+
 </body>
 </html>

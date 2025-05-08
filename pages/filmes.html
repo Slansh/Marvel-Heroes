@@ -1,62 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filmes Marvel</title>
-    <link rel="stylesheet" href="../assets/internal.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filmes Marvel</title>
+  <link rel="stylesheet" href="../assets/internal.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">MarvelHeroes</div>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="pages/herois.html">Heróis</a></li>
-            <li><a href="pages/hqs.html">HQs</a></li>
-            <li><a href="pages/filmes.html">Filmes</a></li>
-            <li><a href="pages/series.html">Séries</a></li>
-        </ul>
-    </nav>
-    
-    <section class="main-section">
-        <h2>Filmes do Universo Marvel</h2>
-        <div class="cards-container ">
-            <div class="card">
-                <img src="../assets/images/the_avengers.png" alt="os vingadores">
-                <div class="card-content">
-                    <h3>The Avengers (2012)</h3>
-                    <p>O épico que uniu os maiores hérois da terra para lutarem contra o Loki.</p>
-                </div>
-            </div>
 
-            <div class="card">
-                <img src="../assets/images/avengers_end-game.png" alt="Vingadores: ultimato">
-                <div class="card-content">
-                    <h3>Vingadores: Ultimato (2019)</h3>
-                    <p>Uma batalha final para reverter o estalo do thanos e salvar o universo.</p>
-                </div>
-            </div>
+  <nav class="navbar">
+    <div class="logo">MarvelVerse</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="herois.html">Heróis</a></li>
+      <li><a href="hqs.html">HQs</a></li>
+      <li><a href="filmes.html">Filmes</a></li>
+      <li><a href="series.html">Séries</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" style="background-image: url('../assets/images/banner.jpg');">
+    <h1>Filmes da Marvel</h1>
+    <p>Reviva os maiores sucessos do Universo Cinematográfico Marvel.</p>
+  </header>
+
+  <section class="main-section">
+    <h2>Filmes em Destaque</h2>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide card">
+          <img src="../assets/images/avengers_end-game.png" alt="Vingadores: Ultimato">
+          <div class="card-content">
+            <h3>Vingadores: Ultimato</h3>
+            <p>O épico final da Saga do Infinito, com todos os heróis reunidos.</p>
+          </div>
         </div>
 
-        <div class="card">
-            <img src="../assets/images/spider-man_no-way-home.jpg" alt="Homem Aranha: no way home">
-            <div class="card-content">
-                <h3>Homem-Aranha: sem volta para casa</h3>
-                <p>Uma aventura multiversal com rostos familiares e muito fan service.</p>
-            </div>
+        <div class="swiper-slide card">
+          <img src="../assets/images/homem-aranha_2.jpg" alt="homem-aranha 2">
+          <div class="card-content">
+            <h3>Homem-Aranha 2</h3>
+            <p>Doutor Octopus busca vingança conta o Homem_Aranha, enquanto o Peter Parker enfrenta problemas pessoais e perde os seus poderes</p>
+          </div>
         </div>
 
-        <div class="card">
-            <img src="../assets/images/homem-aranha_2.jpg" alt="homem-aranha_2">
-            <div class="card-content">
-                <h3>homem-aranha_2 (2004)</h3>
-                <p>Doutor Octopus busca vingança contra o Homem-Aranha, enquanto o Peter Parker enfrenta problemas pessoais e perde seus poderes.</p>
-            </div>
+        <div class="swiper-slide card">
+          <img src="../assets/images/spider-man_no-way-home.jpg" alt="Homem-Aranha: Sem Volta Para Casa">
+          <div class="card-content">
+            <h3>Homem-Aranha: Sem Volta Para Casa</h3>
+            <p>Multiverso, nostalgia e ação com três Homens-Aranha em um só filme!</p>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <footer>
-        Apenas um cara aleatório
-    </footer>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <footer>
+    Desenvolvido por um fã da Marvel, ou talvez nem tanto
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      breakpoints: {
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      }
+    });
+  </script>
+
 </body>
 </html>
